@@ -123,6 +123,5 @@ nvidia-docker-stop(){
 }
 # exec /bin/bash in a container
 nvidia-docker-bash(){
-    nvidia-docker ps -a -q --filter="ancestor=$1" | xargs nvidia-docker exec -it
+    nvidia-docker exec -it $(nvidia-docker ps -a -q --filter="ancestor=$1") /bin/bash
 }
-
