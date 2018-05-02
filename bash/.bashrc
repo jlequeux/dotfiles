@@ -115,3 +115,14 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# custom function for docker
+# enable to stop a container by ancestor name
+nvidia-docker-stop(){
+    nvidia-docker ps -a -q --filter="ancestor=$1" | xargs nvidia-docker stop
+}
+# exec /bin/bash in a container
+nvidia-docker-bash(){
+    nvidia-docker ps -a -q --filter="ancestor=$1" | xargs nvidia-docker exec -it
+}
+
