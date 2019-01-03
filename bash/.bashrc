@@ -15,18 +15,16 @@ if [[ $platform == 'Linux' ]]; then
     alias la='ls -lah --color=auto'
 fi
 
-function host_color {
-    if [[ $(hostname) == 'flb-gpu01' ]]; then
-        echo '\[\033[1;32;41m\]'
-    else
-        echo ''
-    fi
-}
+
+if [[ $(hostname) == 'flb-gpu01' ]]; then
+    export PS1='\[\033[01;32m\]\u@\[\033[1;32;41m\]\h\[\033[01;34;40m\] \w $(parse_git_branch)\$\[\033[00m\] '
+else
+    export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w $(parse_git_branch)\$\[\033[00m\] '
+fi
 
 export CLICOLOR=1
 export EDITOR=/usr/bin/vim
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64/
-export PS1='\[\033[01;32m\]\u@$(host_color)\h\[\033[01;34m\] \w $(parse_git_branch)\$\[\033[00m\] '
 export VISUAL=${EDITOR}
 
 export PATH=$PATH:/home/jeremie/.local/bin
