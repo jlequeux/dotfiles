@@ -41,3 +41,4 @@ nvidia-docker-bash(){
     nvidia-docker exec -it $(nvidia-docker ps -a -q --filter="ancestor=$1") /bin/bash
 }
 
+. ~/.ssh/saveagent
