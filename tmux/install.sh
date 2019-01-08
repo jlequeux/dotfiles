@@ -3,7 +3,7 @@
 backup_dir=backup_$(date +"%Y-%m-%d_%Hh%Mm%Ss")
 echo $backup_dir
 
-FILES='.tmux.conf'
+FILES='.tmux.conf tmux_att_with_keys.sh'
 
 for f in $FILES; do
     echo $f;

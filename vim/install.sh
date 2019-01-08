@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-sudo pip install yapf flake8
+sudo pip3 install yapf flake8
 
 backup_dir=backup_$(date +"%Y-%m-%d_%Hh%Mm%Ss")
 echo $backup_dir
