@@ -42,3 +42,5 @@ nvidia-docker-bash(){
 export PYTHONPATH=$PYTHONPATH:/home/jeremie/code/toad/
 export PYTHONPATH=$PYTHONPATH:/home/jeremie/code/toad/fltk/
 source ~/.ssh/saveagent
+
+alias flake='flake8 . --exclude .ipynb*'
