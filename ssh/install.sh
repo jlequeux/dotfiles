@@ -3,7 +3,7 @@
 backup_dir=backup_$(date +"%Y-%m-%d_%Hh%Mm%Ss")
 echo $backup_dir
 
-FILES='.ssh/config .ssh/saveagent'
+FILES='.ssh/config'
 
 for f in $FILES; do
     echo $f;

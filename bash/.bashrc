@@ -27,8 +27,6 @@ export EDITOR=/usr/bin/vim
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64/
 export VISUAL=${EDITOR}
 
-export PATH=$PATH:/home/jeremie/.local/bin
-
 # custom function for docker
 # enable to stop a container by ancestor name
 nvidia-docker-stop(){
@@ -38,9 +36,5 @@ nvidia-docker-stop(){
 nvidia-docker-bash(){
     nvidia-docker exec -it $(nvidia-docker ps -a -q --filter="ancestor=$1") /bin/bash
 }
-
-export PYTHONPATH=$PYTHONPATH:/home/jeremie/code/toad/
-export PYTHONPATH=$PYTHONPATH:/home/jeremie/code/toad/fltk/
-source ~/.ssh/saveagent
 
 alias flake='flake8 . --exclude .ipynb*'
