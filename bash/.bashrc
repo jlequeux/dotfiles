@@ -13,6 +13,7 @@ if [[ $platform == 'Linux' ]]; then
     alias grep='grep --color=auto'
     alias ll='ls -lh --color=auto'
     alias la='ls -lah --color=auto'
+    export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w $(parse_git_branch)\$\[\033[00m\] '
 fi
 
 if [[ $platform == 'Darwin' ]]; then
@@ -21,7 +22,6 @@ fi
 
 export CLICOLOR=1
 export EDITOR=/usr/bin/vim
-# export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w $(parse_git_branch)\$\[\033[00m\] '
 export VISUAL=${EDITOR}
 
 
