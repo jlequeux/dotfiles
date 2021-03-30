@@ -1,7 +1,7 @@
 [user]
         jlequeux = Jeremie Lequeux
-        email = jlequeux@gmail.com
-        name = Jeremie Lequeux
+	email = jlequeux@gmail.com
+	name = Jeremie Lequeux
 [push]
         default = simple
 [alias]
