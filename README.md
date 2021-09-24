@@ -3,5 +3,5 @@
 configuration files
 
 ## usage
-execute `install.sh` to install configuration files
-execute `install_datascience_tools.sh` to install Python3 tools
+- execute `dotfiles_install.sh` to install configuration files
+- execute `packages_install.sh` to install Python3 tools
